@@ -1,0 +1,14 @@
+/*CSS Selecetors ids and classes*/
+
+
+.trigger {
+    position: relative;
+    border-radius: 50px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
