@@ -105,94 +105,6 @@ var objData = [{
   "channel": "AMC",
   "showtime": "10pm",
   "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
-},{
-  "title": "Walking Dead",
-  "rating": "3",
-  "description": "bah bah bah bah",
-  "rated": "R",
-  "channel": "AMC",
-  "showtime": "10pm",
-  "image": "walkingdead.jpg"
 }
 ]
 
@@ -219,15 +131,19 @@ for (showData = 0; showData < objData.length; showData++) {
   console.log(image);
 
   	
-$( "body" ).append( "<div class='channelBlock'><div class='title'>"+ title +"</div><div class='rating'>" + rating +"</div><div class='description'>" + description +"</div><div class='channel'>" + channel +"</div><div class='rated'>" + rated +"</div></div>" );
-
+$( ".tvC" ).append( "<div class='channelBlock'><div class='title'><strong>Title:</strong> "+ title +"</div><div class='rating'>" + rating +"</div><div class='description'><strong>Des:</strong> " + description +"</div><div class='channel'>" + channel +"</div><div class='rated'><strong>Rated:</strong> " + rated +"</div><img class='image' src='../images/"+ image +"'/></div>" );
   
 }
 
 
+$('.channelBlock').click(function() {
+      $('.slideDoor').addClass('active');
+});
 
 
-
+$('.closeBtn').click(function() {
+  $('.slideDoor').removeClass('active');
+});
 
 });(jQuery); 
 
